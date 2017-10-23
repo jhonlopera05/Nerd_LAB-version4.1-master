@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import com.google.android.gms.common.api.Status;
 import com.squareup.picasso.Picasso;
 
 public class PerfilActivity extends AppCompatActivity {
+
 
     private String correoR,contraseñaR,nombreR, foto,log;
     int duration = Toast.LENGTH_SHORT;
@@ -45,6 +47,7 @@ public class PerfilActivity extends AppCompatActivity {
 
         preferencias=getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
         editor_preferencias=preferencias.edit();
+
 
 
         log=preferencias.getString("log","error");

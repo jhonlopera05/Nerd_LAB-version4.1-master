@@ -32,4 +32,9 @@
     <string name="title_concentrese">Concéntrese</string>
     <string name="title_topo">Aplasta al Topo</string>
     <string name="title_activity_cuatro_imag">CuatroImagActivity</string>
+    <string name="Concentrese">Concéntrese</string>
+    <string name="Instruccionescon">El objetivo de este juego es encontrar una palabra que relacione las 4 imágenes que se muestran.  ¡Pero no será tan sencillo!    y tu única pista será el número de letras que tenga la palabra\n\n.</string>
+    <string name="Instruccionesapla">Aplasta todo es un juego de velocidad de reacción.\n\nLa idea es simple aplasta el topo cuando salga del agujero.  ¡Pero ten cuidado!, cada vez será más rápido</string>
+    <string name="cuatroIM">4 imágenes 1 palabra</string>
+    <string name="Instrucciones4im">El objetivo de este juego es encontrar una palabra que relacione las 4 imágenes que se muestran.\n¡Pero no estan sencillo!\nTu única pista es el número de letras que tenga la palabra.</string>
 </resources>

@@ -58,6 +58,7 @@ public class BottomActivity extends PrincipalActivity implements NavigationView.
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         transaction.replace(R.id.content, new CuatroIFragment()).commit();
+        getSupportActionBar().setTitle("Configuración");
     }
 
 }

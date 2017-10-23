@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -43,12 +45,12 @@ public class PrincipalActivity extends AppCompatActivity
     private  String correoR,contraseñaR,nombreR,log,foto,fotoR;
     private Uri urifoto;
     int duration = Toast.LENGTH_SHORT;
-    Fragment fragment1;
 
     private ImageButton puntaje;
     GoogleApiClient mGoogleApiClient;
     SharedPreferences preferencias;
     SharedPreferences.Editor editor_preferencias;
+    Fragment fragment1;
     int silog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,12 +92,9 @@ public class PrincipalActivity extends AppCompatActivity
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
 
-        fragment1= new MenuPrincipalFragment();
+         fragment1 = new MenuPrincipalFragment();
         getSupportActionBar().setTitle("Menu principal");
         ft.add(R.id.frameprincipal, fragment1).commit();
-
-
-
     }
 
     @Override
@@ -140,6 +139,7 @@ public class PrincipalActivity extends AppCompatActivity
                 foto=null;
 
             }
+
             ft = fm.beginTransaction();
             Bundle args=new Bundle();
             fragment = new PerfilFragment();
@@ -150,7 +150,6 @@ public class PrincipalActivity extends AppCompatActivity
             ft.addToBackStack("nombre");
             ft.addToBackStack("correo");
             ft.addToBackStack("foto");
-
             getSupportActionBar().setTitle(item.getTitle());
             ft.replace(R.id.frameprincipal, fragment).commit();
             FragmentTransaction = false;
@@ -211,7 +210,9 @@ public class PrincipalActivity extends AppCompatActivity
 
 
         if(FragmentTransaction){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameprincipal,fragment).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frameprincipal,fragment)
+                    .commit();
 
             item.setChecked(true);
             getSupportActionBar().setTitle(item.getTitle());
